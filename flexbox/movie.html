@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie</title>
+  <style>
+    .wrapper {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .container {
+      display: flex;
+      gap: 1rem;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 300px;
+      background-color: lightblue;
+      aspect-ratio: 3 /2;
+      text-align: center;
+      line-height: 100px;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: -50px;
+    }
+
+    .next {
+      right: -50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Movies</h2>
+  <div class="wrapper">
+    <button class="nav-button prev" onclick="previousMovies()">‹</button>
+    <div class="container" id="container">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+      <div class="card">Card 5</div>
+    </div>
+    <button class="nav-button next" onclick="nextMovies()">›</button>
+  </div>
+  <script>
+    const container = document.getElementById("container");
+    const scrollDistance = 310;
+    function previousMovies() {
+
+      container.scrollBy({ left: scrollDistance, behavior: "smooth" })
+    }
+    function nextMovies() {
+
+      container.scrollBy({ left: -scrollDistance, behavior: "smooth" })
+    }
+  </script>
+</body>
+
+</html>
