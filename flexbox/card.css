@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  flex: 1; /* Chia đều không gian */
+  min-width: 200px;
+  padding: 20px;
+  background-color: lightblue;
+}

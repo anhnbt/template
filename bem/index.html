@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product Layout</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- 🏠 Header -->
+  <header class="header">
+    <h1 class="header__title">My Shop</h1>
+
+    <!-- 📌 Menu trên desktop -->
+    <nav class="nav nav--desktop">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__right">
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class="fas fa-search"></i>
+      </div>
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- 📌 Menu canvas trên mobile -->
+  <nav class="nav nav--mobile">
+    <button class="menu-close"><i class="fas fa-times"></i></button>
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Sidebar với Social Links & Google Maps -->
+    <aside class="sidebar">
+      <h3 class="sidebar__title">Follow Us</h3>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+
+      <h2>Location</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0!2d106.6958!3d10.7626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ1JzQ1LjAiTiAxMDbCsDQyJzM1LjAiRQ!5e0!3m2!1sen!2s"
+        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </aside>
+
+    <!-- Product List -->
+    <main class="product-list">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?laptop" alt="Laptop">
+        <h2 class="card__title">Laptop Pro</h2>
+        <p class="card__description">High-performance laptop.</p>
+        <button class="button button--primary">Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?phone" alt="Phone">
+        <h2 class="card__title">Smartphone X</h2>
+        <p class="card__description">Latest smartphone model.</p>
+        <button class="button button--secondary">Learn More</button>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?headphones" alt="Headphones">
+        <h2 class="card__title">Wireless Headphones</h2>
+        <p class="card__description">Noise-canceling technology.</p>
+        <button class="button button--primary">Buy Now</button>
+      </div>
+    </main>
+    <!-- Pagination -->
+    <div class="pagination">
+      <button class="page-btn prev">« Prev</button>
+      <span class="page-info">Page 1 of 5</span>
+      <button class="page-btn next">Next »</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__text">© 2025 My Shop</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

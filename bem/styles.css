@@ -1,0 +1,243 @@
+/* 🎨 Biến toàn cục */
+:root {
+  --color-primary: #3498db;
+  --color-secondary: #e74c3c;
+  --color-background: #f5f5f5;
+  --color-text: #333;
+  --font-primary: "Arial", sans-serif;
+  --spacing: 10px;
+  --border-radius: 8px;
+}
+
+/* 🏗️ Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* 🏠 Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: var(--color-primary);
+  color: white;
+}
+
+.nav--desktop {
+  display: flex;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 5px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.search-box i {
+  color: var(--color-primary);
+  margin-left: 5px;
+}
+
+/* 📌 Menu Canvas */
+.nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: var(--color-primary);
+  padding-top: 60px;
+  transition: left 0.3s ease-in-out;
+}
+
+.nav--active {
+  right: 0;
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav__list {
+  list-style: none;
+  text-align: center;
+}
+
+.nav__item {
+  margin: 15px 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+}
+
+/* 📌 Phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-btn {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+.page-btn:hover {
+  background: var(--color-secondary);
+}
+
+/* 📌 Sidebar với Social Links */
+.sidebar {
+  display: none;
+  background: white;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--color-secondary);
+}
+
+/* 🛍️ Product Card */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 🃏 Card */
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.button {
+  padding: var(--spacing);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.button--secondary {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+/* 📌 Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--color-primary);
+  color: white;
+  margin-top: 20px;
+}
+
+/* 📌 Desktop Layout */
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .sidebar {
+    display: block;
+    width: 25%;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

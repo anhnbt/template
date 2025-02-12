@@ -1,0 +1,17 @@
+.container {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center; /* Căn giữa theo trục ngang */
+  align-items: center; /* Căn giữa theo trục dọc */
+  height: 100vh; /* Chiều cao toàn màn hình */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: steelblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

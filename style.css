@@ -59,3 +59,9 @@ footer {
     order: 1;
   }
 }
+@media print {
+  h1 {
+    font-size: 3rem !important;
+    color: green;
+  }
+}
