@@ -1,0 +1,84 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-color: #333;
+  --border-color: #ddd;
+}
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$font-color: var(--font-color);
+$border-color: var(--border-color);
+$border-radius: 8px;
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 16px;
+  text-align: center;
+  min-width: 400px;
+  flex: 1 1 calc(33.333% - 32px);
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 16px 0 8px;
+    color: $font-color;
+  }
+
+  &__desc {
+    font-size: 1rem;
+    color: $secondary-color;
+    margin: 0 0 16px;
+  }
+
+  &__button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin: 4px;
+
+    &--primary {
+      background-color: $primary-color;
+
+      &:hover {
+        background-color: darken(#007bff, 10%);
+      }
+    }
+
+    &--secondary {
+      background-color: $secondary-color;
+
+      &:hover {
+        background-color: darken(#6c757d, 10%);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
